@@ -42,4 +42,10 @@ indexRouter.get("/:postId", (req, res) => {
   res.render("post", { post: post });
 });
 
+indexRouter.use((req, res) => {
+  res.status(404).render("404", { error: "Invalid Page" });
+});
+
+
+
 module.exports = indexRouter;

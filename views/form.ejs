@@ -4,17 +4,18 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>new</title>
+    <link rel="stylesheet" href="/styles.css">
 </head>
 <body>
 
     <h1>Create New Post</h1>
 
-    <form method="POST" action="/new">
-        <label for="author">Enter Author Name</label>
-        <input type="text" name="author">
-        <label for="msg">Enter Message Text</label>
-        <input type="text" name="msg">
-        <button type="submit">Submit</button>
+    <form method="POST" action="/new" class="form">
+        <label for="author">Enter Author Name</label><br>
+        <input type="text" name="author"><br>
+        <label for="msg">Enter Message Text</label><br>
+        <textarea name="msg" rows="4" cols="40"></textarea><br>
+        <button type="submit" class="submit-btn">Submit</button>
     </form>
 
     

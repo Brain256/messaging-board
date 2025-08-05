@@ -4,13 +4,29 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home</title>
+    <link rel = "stylesheet" href="/styles.css">
 </head>
 <body>
-
+    <h1>Message Board</h1>
+    
+    <div class="post-container">
+        <div>
+            <a href="/new" class="new-post">New Post</a>
+        </div>
     <% messages.map((message) => { %>
-        <li>Author: <%=message.user %> Msg: <%=message.text %> Date: <%=message.added %></li>
-        <a href="/<%=message.id %>">View Post</a>
+        <div class="post-block">
+            <div class="post">
+                <header>
+                    <div class="user"><%=message.user %></div>
+                    <div class="date"><%=message.added.toLocaleString() %></div>
+                </header>
+                <div class="text"><%=message.text %></div>
+                
+            </div>
+            <div><a href="/<%=message.id %>" class="view-post">View</a></div>
+        </div>
     <% }) %>
-    <br><a href="/new">Create New Post</a>
+    </div>
+    
 </body>
 </html>
