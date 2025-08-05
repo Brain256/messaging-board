@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+</head>
+<body>
+
+    <% messages.map((message) => { %>
+        <li>Author: <%=message.user %> Msg: <%=message.text %> Date: <%=message.added %></li>
+        <a href="/<%=message.id %>">View Post</a>
+    <% }) %>
+    <br><a href="/new">Create New Post</a>
+</body>
+</html>
